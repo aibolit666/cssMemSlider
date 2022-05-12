@@ -147,7 +147,7 @@ footer {
     font-size: 32px;
   }
   .slider-container {
-    width: 768px;
+    width: 748px;
   }
   .slider-container label {
     width: 35px;
@@ -166,15 +166,14 @@ footer {
     border-radius: 50%;
   }
   .img {
-    margin: 0 auto;
-    width: 768px;
-    height: 768px;
+    width: 748px;
+    height: 748px;
   }
   .bullets {
     margin-left: 20px;
   }
   .texts {
-    margin-top: 55px;
+    margin-top: 75px;
     font-size: 38px;
     padding-right: 70px;
   }
