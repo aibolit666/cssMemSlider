@@ -25,8 +25,9 @@ a:hover {
 
 body {
   position: relative;
-  max-width: 100%;
+  max-width: 800px;
   overflow-x: hidden;
+  margin: 0 auto;
   background: rgb(58, 58, 58);
 }
 
@@ -50,7 +51,6 @@ main {
   width: 800px;
   height: inherit;
   overflow-x: hidden;
-  border-radius: 15px;
   background: rgb(58, 58, 58);
 }
 
@@ -76,6 +76,7 @@ main {
   opacity: 1;
   display: flex;
   justify-content: flex-end;
+  margin-top: 5px;
 }
 
 #slide1:checked ~ .slider > .slide1,
@@ -134,8 +135,8 @@ main {
 footer {
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  max-width: 80%;
+  justify-content: space-evenly;
+  max-width: 50%;
   align-items: flex-end;
 }
 
