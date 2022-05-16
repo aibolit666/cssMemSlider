@@ -1,0 +1,198 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-family: "Forum";
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.24rem;
+  text-decoration: none;
+  color: wheat;
+}
+
+a:hover {
+  color: thistle;
+}
+
+body {
+  position: relative;
+  max-width: 33.2rem;
+  overflow-x: hidden;
+  margin: 0 auto;
+  background: rgb(58, 58, 58);
+}
+
+input {
+  display: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-container {
+  display: flex;
+  height: 33.2rem;
+  margin: 2.08rem auto;
+  display: flex;
+}
+
+.slider {
+  width: 33.2rem;
+  height: inherit;
+  overflow-x: hidden;
+  background: rgb(58, 58, 58);
+}
+
+.slides {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  opacity: 0;
+  z-index: 0;
+  transform: translateX(0%);
+  margin-left: 33.2rem;
+  transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+}
+
+.texts {
+  font-family: "Roboto";
+  font-size: 1.16rem;
+  font-weight: 300;
+  letter-spacing: 0.08rem;
+  max-width: 33.2rem;
+  color: wheat;
+  z-index: 10;
+  opacity: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.2rem;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4 {
+  opacity: 1;
+  z-index: 1;
+  transform: translateX(-100%);
+}
+
+.slider-container .bullets {
+  position: absolute;
+  top: 35.4rem;
+  z-index: 1000;
+}
+
+.slider-container label {
+  display: inline-block;
+  position: relative;
+  width: 0.62rem;
+  height: 0.62rem;
+  margin: 1.04rem 0.5rem 0 0.66rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+.img {
+  border-radius: 0.62rem;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-container label:hover,
+#slide1:checked ~ .bullets label:nth-of-type(1),
+#slide2:checked ~ .bullets label:nth-of-type(2),
+#slide3:checked ~ .bullets label:nth-of-type(3),
+#slide4:checked ~ .bullets label:nth-of-type(4) {
+  background: black;
+  filter: brightness(200%);
+}
+
+.slider-container label::after {
+  display: block;
+  position: absolute;
+  content: " ";
+  width: 0.5rem;
+  height: 0.5rem;
+  left: -0.12rem;
+  top: -0.12rem;
+  border: 0.16rem solid cadetblue;
+  border-radius: 50%;
+}
+
+footer {
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 100%;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden !important;
+  }
+  body {
+    max-width: 20.77rem;
+  }
+  a {
+    font-size: 0.88rem;
+  }
+  .slider-container {
+    max-width: 20.77rem;
+    max-height: 35rem;
+  }
+  .slides {
+    max-height: 20rem;
+  }
+  .slider {
+    max-height: 20rem;
+  }
+  .slider-container label {
+    width: 0.96rem;
+    height: 0.96rem;
+    margin: 0.96rem 0.6rem 0 0.44rem;
+  }
+  .slider-container label::after {
+    display: block;
+    position: absolute;
+    content: " ";
+    width: 0.88rem;
+    height: 0.88rem;
+    left: -0.08rem;
+    top: -0.08rem;
+    border: 0.1rem solid cadetblue;
+    border-radius: 50%;
+  }
+  .img {
+    width: 20.77rem;
+    height: 20.77rem;
+  }
+
+  .slider-container .bullets {
+    top: 24.4rem;
+  }
+  .bullets {
+    margin-left: 0.54rem;
+  }
+  .texts {
+    margin-top: 2.08rem;
+    font-size: 1rem;
+    padding-right: 12.5rem;
+  }
+  footer {
+    max-width: 90%;
+    margin-top: 0rem;
+  }
+}
